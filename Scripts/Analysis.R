@@ -1,5 +1,4 @@
-### R Analysis– Claire Conley
-## Produces Bar Plot! 
+### R Analysis – Claire Conley 
 
 # Load packages 
 
@@ -67,7 +66,7 @@ if (nrow(igf_df) == 0) {
   stop("No IGF pathway genes detected in dataset")
 }
 
-fig3 <- ggplot(igf_df,
+fig1 <- ggplot(igf_df,
                aes(x = reorder(gene, log2foldchange),
                    y = log2foldchange,
                    fill = log2foldchange > 0)) +
@@ -82,33 +81,7 @@ fig3 <- ggplot(igf_df,
   ) +
   theme_minimal()
 
-print(fig3)
+print(fig1)
 
-ggsave("figure3_igf_axis.png", fig3, width = 8, height = 5)
+ggsave("figure1_igf_axis.png", fig1, width = 8, height = 5)
 
-# Figure 4: Focused IGF / GH Signaling Axis
-
-igf_genes <- c(
-  "IGF1", "IGF1R", "GHR",
-  "IRS1", "IRS2",
-  "AKT1", "AKT2",
-  "PIK3CA", "FOXO1"
-)
-
-igf_df <- df %>%
-  filter(gene %in% igf_genes) %>%
-  mutate(direction = ifelse(log2foldchange > 0, "Up", "Down"))
-
-fig4 <- ggplot(igf_df, aes(x = reorder(gene, log2foldchange),
-                           y = log2foldchange,
-                           fill = direction)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  labs(
-    title = "Figure 4: IGF / GH Signaling Axis",
-    x = "Gene",
-    y = "Log2 Fold Change"
-  ) +
-  theme_minimal()
-
-ggsave("figure4_igf_axis.png", fig4, width = 7, height = 5)
