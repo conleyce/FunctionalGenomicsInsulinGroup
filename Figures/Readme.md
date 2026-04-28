@@ -8,3 +8,4 @@
 + plotCounts plot.png – Gene-level count plot displaying normalized expression counts for a selected gene across small and large dog groups.
 + pvalues_vs_nes_plot.png – Scatterplot comparing pathway enrichment significance (p-values) versus normalized enrichment scores (NES) from GSEA results.
 + volcano plot.png – Volcano plot showing statistical significance versus fold change for all genes, highlighting genes differentially expressed between small and large dogs.
++ figure1_igf_axis.png – Bar graph of genes involved in IGF/GH signaling pathway, including growth hormone receptor signaling, PI3K/AKT/mTOR, FOXO, & STAT. Red genes are upregulated, whereas blue genes are downregulated. ESR1 is shown to be significantly upregulated with a padj = .0025.
