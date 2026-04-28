@@ -10,5 +10,5 @@
 + 2b_Trimmomatic_new3.sh – Revised trimming pipeline for newly added or replacement samples using the same Trimmomatic workflow.
 + 3a_IndexGenome.sh – Builds HiSat2 index files for the canine reference genome canFam6 (GCF_000002285.5) prior to alignment.
 + 3b_Mapping.sh – Aligns trimmed RNA-seq reads to the canFam6 canine reference genome using HiSat2 v2.2.0 and generates alignment files for quantification.
-+ Analysis.R – Main downstream statistical analysis script performing gene count import, DESeq2 differential expression, GSEA, visualization (PCA, MA plot, volcano plot, heatmap), and IIS pathway-focused analyses.
++ Analysis.R – Analysis.R – R visualization script that imports DESeq2 differential expression results and generates pathway-focused bar plots of IGF/GH and IIS-related genes, highlighting log2 fold-change patterns between small and large dog blood samples.
 + DESeq2_sample_selection_analysis.R – Sensitivity analysis script testing how alternative sample inclusion/exclusion sets affected DESeq2 results, DEG overlap, and IIS gene expression trends across datasets.
